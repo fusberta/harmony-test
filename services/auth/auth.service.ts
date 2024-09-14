@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client";
-import { IAuth, ITokens, Profile, ProfileResponse } from "@/types/auth.interface";
+import { IAuth, IAuthResponse, ITokens, Profile, ProfileResponse } from "@/types/auth.interface";
 import { saveTokensStorage } from "./auth.helper";
 import Cookies from "js-cookie"
 import { REFRESH_TOKEN } from "@/assets/constants";
@@ -18,13 +18,13 @@ export const AuthService = {
         const mutation = LOGIN_MUTATION
 
         try {
-            const response = await client.mutate<ITokens>({
+            const response = await client.mutate<IAuthResponse>({
                 mutation,
                 variables: { email: data.email, password: data.password }
             });
-
+            console.log(response.data?.login)
             if (response.data) {
-                saveTokensStorage(response.data);
+                saveTokensStorage(response.data.login);
                 return response.data;
             }
 

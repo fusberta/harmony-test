@@ -4,8 +4,12 @@ export interface IAuth {
 }
 
 export interface ITokens {
-    accessToken: string
-    refreshToken: string
+    access_token: string
+    refresh_token: string
+}
+
+export interface IAuthResponse {
+    login: ITokens
 }
 
 export interface Profile {

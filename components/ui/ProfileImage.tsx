@@ -1,22 +1,30 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 import { Button } from './button'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
+import { useUserStore } from '@/store/store'
 
 interface ProfileImageProps {
-    src: string
     className?: string
 }
 
-const ProfileImage: React.FC<ProfileImageProps> = ({ src, className }) => {
+const ProfileImage: React.FC<ProfileImageProps> = ({ className }) => {
+    const { user, setUser } = useUserStore();
+
+    if (!user.avatar) {
+        return null;
+    }
+
     return (
-        <Button variant="secondary" size="icon" className={`rounded-full ${cn(className)}`}>
+        <Button variant="secondary" size="icon" className={`rounded-full overflow-hidden ${cn(className)}`}>
             <Image
                 width={30}
                 height={30}
-                src={src}
+                src={user.avatar}
                 alt="Profile"
                 className='w-full h-full'
+                priority
             />
         </Button>
     )

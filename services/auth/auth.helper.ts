@@ -8,8 +8,8 @@ export const getAccessToken = () => {
 }
 
 export const saveTokensStorage = (data: ITokens) => {
-    Cookies.set(ACCESS_TOKEN, data.accessToken)
-    Cookies.set(REFRESH_TOKEN, data.refreshToken)
+    Cookies.set(ACCESS_TOKEN, data.access_token)
+    Cookies.set(REFRESH_TOKEN, data.refresh_token)
 }
 
 export const removeTokensFromStorage = () => {
