@@ -1,7 +1,6 @@
 'use client'
 import Hero from '@/components/ui/hero/Hero';
 import Main from '@/components/ui/main/Main';
-import Sidebar from '@/components/ui/sidebar/Sidebar';
 import { getAccessToken } from '@/services/auth/auth.helper';
 import { AuthService } from '@/services/auth/auth.service';
 import { useUserStore } from '@/store/store';
@@ -12,6 +11,7 @@ import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
 const MyInfo: NextPage = () => {
+    // eslint-disable-next-line
     const [profile, setProfile] = useState<Profile | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const setUser = useUserStore((state) => state.setUser);

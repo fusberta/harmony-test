@@ -3,7 +3,7 @@ import React from 'react'
 import { Button } from './button'
 import { LogOut } from 'lucide-react'
 import { removeTokensFromStorage } from '@/services/auth/auth.helper';
-import { redirect, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useUserStore } from '@/store/store';
 
 const LogoutButton = ({ className }: {className?: string}) => {

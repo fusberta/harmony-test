@@ -6,7 +6,7 @@ import { Combobox } from '../combobox';
 import ProfileMenu from './ProfileMenu';
 
 const Hero = () => {
-    const { user, setUser } = useUserStore();
+    const { user } = useUserStore();
     return (
         <div className='h-48 bg-accent px-16 pt-8 flex items-center justify-between space-x-5 max-[500px]:flex-col max-[500px]:items-center max-[500px]:h-auto max-[500px]:pb-8'>
             <ProfileImage className='w-40 h-40 z-20 shadow-xl ml-8 max-[860px]:ml-0 max-[600px]:w-20 max-[600px]:h-20 shrink-0' />

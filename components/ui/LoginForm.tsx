@@ -33,15 +33,16 @@ export function LoginForm() {
             const response = await AuthService.login(data);
             console.log("Login successful:", response);
             router.replace('/my-info')
-        } catch (err: any) {
-            if (err.graphQLErrors && err.graphQLErrors.length > 0) {
+        } catch (err: unknown) {
+            if (err instanceof Error && 'graphQLErrors' in err && Array.isArray(err.graphQLErrors) && err.graphQLErrors.length > 0) {
                 setServerError("Invalid username or password");
             } else {
                 setServerError("Login failed. Please check your credentials and try again.");
             }
             console.error("Login error:", err);
         }
-    };
+    }
+    
     return (
         <Card className="mx-auto max-w-sm">
             <CardHeader>

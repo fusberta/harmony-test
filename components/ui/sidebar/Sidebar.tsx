@@ -1,6 +1,6 @@
 import React from 'react'
 import InfoCard, { CardItem } from './InfoCard';
-import { CalendarIcon, ClockIcon, Contact, GlobeIcon, HashIcon, MapPinIcon, UsersIcon } from 'lucide-react';
+import { CalendarIcon, ClockIcon, GlobeIcon, HashIcon, MapPinIcon, UsersIcon } from 'lucide-react';
 import ContactCard from './ContactCard';
 
 const HireDateCard = () => {

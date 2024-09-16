@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Button } from './button'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
@@ -10,7 +10,7 @@ interface ProfileImageProps {
 }
 
 const ProfileImage: React.FC<ProfileImageProps> = ({ className }) => {
-    const { user, setUser } = useUserStore();
+    const { user } = useUserStore();
 
     if (!user.avatar) {
         return null;

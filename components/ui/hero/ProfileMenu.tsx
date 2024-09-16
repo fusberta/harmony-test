@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle, profileMenuTriggerStyle } from '../navigation-menu'
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, profileMenuTriggerStyle } from '../navigation-menu'
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react';
 
