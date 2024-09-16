@@ -1,10 +1,14 @@
-import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/ui/mode-toggle";
-export default function Home() {
-  return (
-    <div className="">
-      <Button>Click me</Button>
-      <ModeToggle />
-    </div>
-  )
-}
+'use client'
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+const HomePage = () => {
+  const { replace } = useRouter();
+
+  useEffect(() => {
+    replace('/auth');
+  }, []);
+
+  return null
+};
+
+export default HomePage;
