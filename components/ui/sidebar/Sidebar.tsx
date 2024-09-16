@@ -37,7 +37,7 @@ const HireDateCard = () => {
   };
 const Sidebar = () => {
   return (
-    <div className="space-y-4 -translate-y-4 text-sm">
+    <div className="space-y-4 -translate-y-4 text-sm max-[860px]:hidden">
       <ContactCard />
       <HireDateCard />
       <EmployeeDetailsCard />

@@ -1,5 +1,5 @@
 import React from 'react'
-import MainMenu from './MainMenu'
+import MainMenu from './main-menu/MainMenu'
 import SearchInput from './SearchInput'
 import OptionMenu from './OptionMenu'
 

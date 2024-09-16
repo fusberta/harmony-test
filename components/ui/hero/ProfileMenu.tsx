@@ -5,9 +5,9 @@ import { ChevronDown } from 'lucide-react';
 
 const ProfileMenu = () => {
     return (
-        <NavigationMenu className='h-full items-end'>
+        <NavigationMenu className='h-full items-end max-xl:hidden'>
             <NavigationMenuList>
-                <NavigationMenuItem className='rounded-t-md overflow-hidden flex flex-nowrap'>
+                <NavigationMenuItem className='rounded-t-md overflow-hidden flex flex-wrap'>
                     <Link href="#" legacyBehavior passHref>
                         <NavigationMenuLink className={profileMenuTriggerStyle()}>
                             Personal
